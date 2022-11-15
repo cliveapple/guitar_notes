@@ -1,8 +1,11 @@
+import tkinter
+
 import numpy as np
 import math
 import time as t
 import sounddevice as sd
 import turtle
+from tkinter import *
 import random
 
 sps = 44100  # sound per second
@@ -21,33 +24,6 @@ FONT_SIZE = 25
 FONT = ("Aarial", FONT_SIZE, "normal")
 note.pensize(2)
 
-
-def user_in():
-    print("option 1 : DISPLAY Guitar notes")
-    print("option 2 : DISPLAY Guitar notes positions")
-    x = input("enter a NUMBER :")
-    try:
-        if int(x) == 2:
-            screen.onclick(animmation2)
-            print(x + " selected")
-        elif x != 2:
-            screen.onclick(animmation)
-            print(x + " selected")
-    except:
-        print("enter real number!")
-
-
-def draw_pos(x, y):
-    note = turtle.Turtle()
-    note.shape('circle')
-    note.color('')
-    note.shapesize(2)
-    note.penup()
-    FONT_SIZE = 25
-    FONT = ("Aarial", FONT_SIZE, "normal")
-    note.pencolor('blue')
-    note.pensize(2)
-    note.goto(x, y)
 
 
 def color1(x, y):
@@ -104,7 +80,7 @@ def color6(x, y):
     note1.goto(x, y)
 
 
-def animmation(x, y):
+def animmation():
     openstrg = [-474.0, -142.0], [-474.0, -86.0], [-472.0, -32.0], [-472.0, 27.0], [-472.0, 86.0], [-472.0, 144.0]
     note_list_E = [-432.0, -141.0], [-354.0, -142.0], [-285.0, -142.0], [-216.0, -145.0] \
         , [-153.0, -145.0], [-93.0, -145.0], [-9.0, -142.0], [58.0, -143.0], [120.0, -143.0], [191.0, -143.0], [260.0,
@@ -406,7 +382,8 @@ def animmation(x, y):
         break
 
 
-def animmation2(x, y):
+
+def animmation2():
     openstrg = [-474.0, -142.0], [-474.0, -86.0], [-472.0, -32.0], [-472.0, 27.0], [-472.0, 86.0], [-472.0, 144.0]
     note_list_E = [-432.0, -141.0], [-354.0, -142.0], [-285.0, -142.0], [-216.0, -145.0] \
         , [-153.0, -145.0], [-93.0, -145.0], [-9.0, -142.0], [58.0, -143.0], [120.0, -143.0], [191.0, -143.0], [260.0,
@@ -439,6 +416,32 @@ def animmation2(x, y):
         color5(x, y)
 
 
-user_in()
+root = tkinter.Tk()
+root.config(background='black')
+root.minsize(1000, 400)
+root.maxsize(1000, 400)
+label1 = Label(root, text="option 1 : DISPLAY notes position")
+label2 = Label(root, text="option 2 : DISPLAY Guitar notes")
+label1.config(font=('Helvatical bold', 20), background='black', foreground='red')
+label2.config(font=('Helvatical bold', 20), background='black', foreground='red')
+e = Entry(root)
+def user_in():
+    if int(e.get()) < 2:
+        print(e,animmation2())
+    elif e != 2:
+        print(e,animmation())
 
+
+
+
+button1 = Button(root, text='click', width=50, bg='red',command=user_in)
+e.config(bg='black', fg='red', font=('Helvatical bold', 20))
+label1.pack()
+label2.pack()
+e.pack()
+button1.bind('<Button-1>')
+e.get()
+button1.pack()
+
+root.mainloop()
 screen.mainloop()
