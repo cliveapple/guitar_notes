@@ -1,9 +1,8 @@
 import tkinter
-
-import numpy as np
+#import numpy as np
 import math
 import time as t
-import sounddevice as sd
+#import sounddevice as sd
 import turtle
 from tkinter import *
 import random
@@ -13,6 +12,7 @@ duration = 5000
 atten = 3.0  # volume
 
 screen = turtle.Screen()
+screen.title("Fret Board")
 screen.setup(1000, 400)
 screen.bgpic('1024x510.gif')
 note = turtle.Turtle()
@@ -418,6 +418,7 @@ def animmation2():
 
 root = tkinter.Tk()
 root.config(background='black')
+root.title("Menu")
 root.minsize(1000, 400)
 root.maxsize(1000, 400)
 label1 = Label(root, text="option 1 : DISPLAY notes position")
@@ -425,11 +426,14 @@ label2 = Label(root, text="option 2 : DISPLAY Guitar notes")
 label1.config(font=('Helvatical bold', 20), background='black', foreground='red')
 label2.config(font=('Helvatical bold', 20), background='black', foreground='red')
 e = Entry(root)
+
+def fade():
+    root.destroy()
 def user_in():
     if int(e.get()) < 2:
-        print(e,animmation2())
+        print(e,fade(),animmation2())
     elif e != 2:
-        print(e,animmation())
+        print(e,fade(),animmation())
 
 
 
