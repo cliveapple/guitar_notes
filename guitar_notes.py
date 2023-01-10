@@ -1,15 +1,10 @@
-import tkinter
-#import numpy as np
 import math
 import time as t
-#import sounddevice as sd
 import turtle
 from tkinter import *
 import random
+import playsound
 
-sps = 44100  # sound per second
-duration = 5000
-atten = 3.0  # volume
 
 screen = turtle.Screen()
 screen.title("Fret Board")
@@ -23,7 +18,6 @@ note.penup()
 FONT_SIZE = 25
 FONT = ("Aarial", FONT_SIZE, "normal")
 note.pensize(2)
-
 
 
 def color1(x, y):
@@ -147,28 +141,40 @@ def animmation():
         note.color('blue')
         note.goto(F)
         note.write('F', font=FONT)
+        playsound.playsound('notes/TE1.mp3')
         note.goto(FS)
         note.write('F#', font=FONT)
+        playsound.playsound('notes/TE2.mp3')
         note.goto(G)
         note.write('G', font=FONT)
+        playsound.playsound('notes/TE3.mp3')
         note.goto(Ab)
         note.write('Ab', font=FONT)
+        playsound.playsound('notes/TE4.mp3')
         note.goto(A)
         note.write('A', font=FONT)
+        playsound.playsound('notes/TE5.mp3')
         note.goto(Bb)
         note.write('Bb', font=FONT)
+        playsound.playsound('notes/TE6.mp3')
         note.goto(B)
         note.write('B', font=FONT)
+        playsound.playsound('notes/TE7.mp3')
         note.goto(C)
         note.write('C', font=FONT)
+        playsound.playsound('notes/TE8.mp3')
         note.goto(CS)
         note.write('C#', font=FONT)
+        playsound.playsound('notes/TE9.mp3')
         note.goto(D)
         note.write('D', font=FONT)
+        playsound.playsound('notes/TE10.mp3')
         note.goto(Eb)
         note.write('Eb', font=FONT)
+        playsound.playsound('notes/TE11.mp3')
         note.goto(E)
         note.write('E', font=FONT)
+        playsound.playsound('notes/TE12.mp3')
         break
     ####################################################################
     ##########################A_string##################################
@@ -190,28 +196,40 @@ def animmation():
 
         note.goto(Bb)
         note.write('Bb', font=FONT)
+        playsound.playsound('notes/A1.mp3')
         note.goto(B)
         note.write('B', font=FONT)
+        playsound.playsound('notes/A2.mp3')
         note.goto(C)
         note.write('C', font=FONT)
+        playsound.playsound('notes/A3.mp3')
         note.goto(CS)
         note.write('C#', font=FONT)
+        playsound.playsound('notes/A4.mp3')
         note.goto(D)
         note.write('D', font=FONT)
+        playsound.playsound('notes/A5.mp3')
         note.goto(Eb)
         note.write('Eb', font=FONT)
+        playsound.playsound('notes/A6.mp3')
         note.goto(E)
         note.write('E', font=FONT)
+        playsound.playsound('notes/A7.mp3')
         note.goto(F)
         note.write('F', font=FONT)
+        playsound.playsound('notes/A8.mp3')
         note.goto(FS)
         note.write('F#', font=FONT)
+        playsound.playsound('notes/A9.mp3')
         note.goto(G)
         note.write('G', font=FONT)
+        playsound.playsound('notes/A10.mp3')
         note.goto(Ab)
         note.write('Ab', font=FONT)
+        playsound.playsound('notes/A11.mp3')
         note.goto(A)
         note.write('A', font=FONT)
+        playsound.playsound('notes/A12.mp3')
         break
     ##############################################################################
     #############################D_string#################################################
@@ -231,30 +249,42 @@ def animmation():
         note.color('orange')
         note.goto(Eb)
         note.write('Eb', font=FONT)
+        playsound.playsound('notes/D1.mp3')
         note.goto(E)
         note.write('E', font=FONT)
+        playsound.playsound('notes/D2.mp3')
         note.goto(F)
         note.write('F', font=FONT)
+        playsound.playsound('notes/D3.mp3')
         note.goto(FS)
         note.write('F#', font=FONT)
+        playsound.playsound('notes/D4.mp3')
         note.goto(G)
         note.write('G', font=FONT)
+        playsound.playsound('notes/D5.mp3')
         note.goto(Ab)
         note.write('Ab', font=FONT)
+        playsound.playsound('notes/D6.mp3')
         note.goto(A)
         note.write('A', font=FONT)
+        playsound.playsound('notes/D7.mp3')
         note.goto(Bb)
-        note.write('F', font=FONT)
+        note.write('Bb', font=FONT)
+        playsound.playsound('notes/D8.mp3')
         note.goto(B)
         note.write('B', font=FONT)
+        playsound.playsound('notes/D9.mp3')
         note.goto(C)
         note.write('C', font=FONT)
+        playsound.playsound('notes/D10.mp3')
         note.goto(CS)
         note.write('C#', font=FONT)
         note.goto(A)
         note.write('A', font=FONT)
+        playsound.playsound('notes/D11.mp3')
         note.goto(D)
         note.write('D', font=FONT)
+        playsound.playsound('notes/D12.mp3')
         break
     ###################################################################################
     ##################################G_string#################################################
@@ -274,28 +304,51 @@ def animmation():
     for x, y in note_list_G:
         note.goto(Ab)
         note.write('Ab', font=FONT)
+        playsound.playsound('notes/G1.mp3')
+
         note.goto(A)
         note.write('A', font=FONT)
+        playsound.playsound('notes/G2.mp3')
+
         note.goto(Bb)
         note.write('Bb', font=FONT)
+        playsound.playsound('notes/G3.mp3')
+
         note.goto(B)
         note.write('B', font=FONT)
+        playsound.playsound('notes/G4.mp3')
         note.goto(C)
         note.write('C', font=FONT)
+        playsound.playsound('notes/G5.mp3')
+
         note.goto(CS)
         note.write('C#', font=FONT)
+        playsound.playsound('notes/G6.mp3')
+
         note.goto(D)
         note.write('D', font=FONT)
+        playsound.playsound('notes/G7.mp3')
+
         note.goto(Eb)
         note.write('Eb', font=FONT)
+        playsound.playsound('notes/G8.mp3')
+
         note.goto(E)
         note.write('E', font=FONT)
+        playsound.playsound('notes/G9.mp3')
+
         note.goto(F)
         note.write('F', font=FONT)
+        playsound.playsound('notes/G10.mp3')
+
         note.goto(FS)
         note.write('F#', font=FONT)
+        playsound.playsound('notes/G11.mp3')
+
         note.goto(G)
         note.write('G', font=FONT)
+        playsound.playsound('notes/G12.mp3')
+
         break
     #######################################################################################
     #####################################B_String##########################################
@@ -316,28 +369,40 @@ def animmation():
     for x, y in note_list_B:
         note.goto(C)
         note.write('C', font=FONT)
+        playsound.playsound('notes/B1.mp3')
         note.goto(CS)
         note.write('C#', font=FONT)
+        playsound.playsound('notes/B2.mp3')
         note.goto(D)
         note.write('D', font=FONT)
+        playsound.playsound('notes/B3.mp3')
         note.goto(Eb)
         note.write('Eb', font=FONT)
+        playsound.playsound('notes/B4.mp3')
         note.goto(E)
         note.write('E', font=FONT)
+        playsound.playsound('notes/B5.mp3')
         note.goto(F)
         note.write('F', font=FONT)
+        playsound.playsound('notes/B6.mp3')
         note.goto(FS)
         note.write('F#', font=FONT)
+        playsound.playsound('notes/B7.mp3')
         note.goto(G)
         note.write('G', font=FONT)
+        playsound.playsound('notes/B8.mp3')
         note.goto(Ab)
         note.write('Ab', font=FONT)
+        playsound.playsound('notes/B9.mp3')
         note.goto(A)
         note.write('A', font=FONT)
+        playsound.playsound('notes/B10.mp3')
         note.goto(Bb)
         note.write('Bb', font=FONT)
+        playsound.playsound('notes/B11.mp3')
         note.goto(B)
         note.write('B', font=FONT)
+        playsound.playsound('notes/B12.mp3')
         break
     #######################################################################################
     #################################e_string##############################################
@@ -357,29 +422,42 @@ def animmation():
     for x, y in note_list_e1:
         note.goto(F)
         note.write('F', font=FONT)
+        playsound.playsound('notes/e1.mp3')
         note.goto(FS)
         note.write('F#', font=FONT)
+        playsound.playsound('notes/e2.mp3')
         note.goto(G)
         note.write('G', font=FONT)
+        playsound.playsound('notes/e3.mp3')
         note.goto(Ab)
         note.write('Ab', font=FONT)
+        playsound.playsound('notes/e4.mp3')
         note.goto(A)
         note.write('A', font=FONT)
+        playsound.playsound('notes/e5.mp3')
         note.goto(Bb)
         note.write('Bb', font=FONT)
+        playsound.playsound('notes/e6.mp3')
         note.goto(B)
         note.write('B', font=FONT)
+        playsound.playsound('notes/e7.mp3')
         note.goto(C)
         note.write('C', font=FONT)
+        playsound.playsound('notes/e8.mp3')
         note.goto(CS)
         note.write('C#', font=FONT)
+        playsound.playsound('notes/e9.mp3')
         note.goto(D)
         note.write('D', font=FONT)
+        playsound.playsound('notes/e10.mp3')
         note.goto(Eb)
         note.write('Eb', font=FONT)
+        playsound.playsound('notes/e11.mp3')
         note.goto(E)
         note.write('E', font=FONT)
+        playsound.playsound('notes/e12.mp3')
         break
+
 
 
 
@@ -416,11 +494,14 @@ def animmation2():
         color5(x, y)
 
 
-root = tkinter.Tk()
+root = Tk()
 root.config(background='black')
 root.title("Menu")
 root.minsize(1000, 400)
-root.maxsize(1000, 400)
+
+
+
+
 label1 = Label(root, text="option 1 : DISPLAY notes position")
 label2 = Label(root, text="option 2 : DISPLAY Guitar notes")
 label1.config(font=('Helvatical bold', 20), background='black', foreground='red')
@@ -438,7 +519,7 @@ def user_in():
 
 
 
-button1 = Button(root, text='click', width=50, bg='red',command=user_in)
+button1 = Button(root, text='CLICK', width=50, bg='white',command=user_in)
 e.config(bg='black', fg='red', font=('Helvatical bold', 20))
 label1.pack()
 label2.pack()
